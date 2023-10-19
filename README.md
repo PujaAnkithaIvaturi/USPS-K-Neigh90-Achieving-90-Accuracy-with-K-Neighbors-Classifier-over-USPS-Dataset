@@ -10,16 +10,28 @@ Your submission should include the following:
 5. use different image feature extraction method such as SIFT can add extra credit
 
 **Dataset**: 
+
 USPS： [https://www.kaggle.com/bistaumanga/usps-dataset](https://www.kaggle.com/datasets/bistaumanga/usps-dataset)
+
 USPS contains handwritten digits. It has 7291 train and 2007 test images. The images are 16*16 grayscale pixels.
 The dataset is given in hdf5 file format, the hdf5 file has two groups train and test and each group has two datasets: data and target.
+
 Use this code to read the file:
+
+
+
 with h5py.File(path, 'r') as hf:
+
      train = hf.get('train')
+     
      X_train = train.get('data')[:]
+     
      y_train = train.get('target')[:]
+     
      test = hf.get('test')
+     
      X_test = test.get('data')[:]
+     
      y_test = test.get('target')[:]
 
  
